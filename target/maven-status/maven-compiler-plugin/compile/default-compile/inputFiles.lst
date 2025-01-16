@@ -1,3 +1,5 @@
-C:\Users\Luis Alva\Documents\.repositorios_github\java\snack_machine\src\main\java\snacks_machine\Snack.java
-C:\Users\Luis Alva\Documents\.repositorios_github\java\snack_machine\src\main\java\snacks_machine\SnackMachine.java
-C:\Users\Luis Alva\Documents\.repositorios_github\java\snack_machine\src\main\java\snacks_machine\Snacks.java
+C:\Users\Luis Alva\Documents\.repositorios_github\java\snack_machine\src\main\java\snacks_machine\domain\Snack.java
+C:\Users\Luis Alva\Documents\.repositorios_github\java\snack_machine\src\main\java\snacks_machine\presentation\SnackMachine.java
+C:\Users\Luis Alva\Documents\.repositorios_github\java\snack_machine\src\main\java\snacks_machine\service\ISnacksService.java
+C:\Users\Luis Alva\Documents\.repositorios_github\java\snack_machine\src\main\java\snacks_machine\service\SnacksServiceFile.java
+C:\Users\Luis Alva\Documents\.repositorios_github\java\snack_machine\src\main\java\snacks_machine\service\SnacksServiceList.java

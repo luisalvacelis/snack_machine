@@ -1,4 +1,4 @@
-package snacks_machine;
+package snacks_machine.domain;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -20,6 +20,13 @@ public class Snack implements Serializable {
         this.name = name;
         this.price = price;
     }
+
+    public Snack(int idSnack, String name, double price) {
+        this.idSnack = idSnack;
+        this.name = name;
+        this.price = price;
+    }
+    
 
     public static int getCountSnacks() {
         return countSnacks;
@@ -48,6 +55,10 @@ public class Snack implements Serializable {
     @Override
     public String toString() {
         return "Snack{" + "idSnack=" + idSnack + ", name=" + name + ", price=" + price + '}';
+    }
+
+    public String writeSnack() {
+        return idSnack + "," + name + "," + price;
     }
 
     @Override
@@ -79,6 +90,5 @@ public class Snack implements Serializable {
         }
         return Objects.equals(this.name, other.name);
     }
-    
-    
+
 }

@@ -1,3 +1,5 @@
-snacks_machine\Snacks.class
-snacks_machine\Snack.class
-snacks_machine\SnackMachine.class
+snacks_machine\presentation\SnackMachine.class
+snacks_machine\service\ISnacksService.class
+snacks_machine\service\SnacksServiceFile.class
+snacks_machine\service\SnacksServiceList.class
+snacks_machine\domain\Snack.class

@@ -1,9 +1,10 @@
-package snacks_machine;
+package snacks_machine.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import snacks_machine.domain.Snack;
 
-public class Snacks {
+public class SnacksServiceList implements ISnacksService{
 
     private static final List<Snack> snacks;
 
@@ -15,11 +16,13 @@ public class Snacks {
 
     }
 
-    public static void addSnack(Snack snack) {
+    @Override
+    public void addSnack(Snack snack) {
         snacks.add(snack);
     }
 
-    public static void showSnacks() {
+    @Override
+    public void showSnacks() {
         var inventorySnacks = "";
         for (var snack : snacks) {
             inventorySnacks += snack.toString() + "\n";
@@ -28,7 +31,13 @@ public class Snacks {
         System.out.println(inventorySnacks);
     }
 
-    public static List<Snack> getSnacks() {
+    @Override
+    public List<Snack> getSnacks() {
         return snacks;
+    }
+
+    @Override
+    public void deleteSnack(Snack snack) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
