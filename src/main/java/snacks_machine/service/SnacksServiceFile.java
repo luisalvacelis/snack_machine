@@ -7,7 +7,6 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import snacks_machine.domain.Snack;
 
@@ -84,9 +83,9 @@ public class SnacksServiceFile implements ISnacksService {
         var file = new File(FILE_NAME);
         try {
             append = file.exists();
-            var output = new PrintWriter(new FileWriter(file, append));
-            output.println(snack.writeSnack());
-            output.close();
+            try (var output = new PrintWriter(new FileWriter(file, append))) {
+                output.println(snack.writeSnack());
+            }
         } catch (IOException e) {
             System.out.println("Error al agregar snack: " + e.getMessage());
         }
@@ -126,14 +125,11 @@ public class SnacksServiceFile implements ISnacksService {
                 }
             });
 
-            System.out.println("Lineas actualizadas: " + updatedLines);
-
             try (var output = new PrintWriter(new FileWriter(file, false))) {
                 for (String updatedLine : updatedLines) {
                     output.println(updatedLine);
                 }
             }
-
             System.out.println("Se ha eliminado correctamente el snack.");
         } catch (IOException e) {
             System.out.println("Error al eliminar snack: " + e.getMessage());

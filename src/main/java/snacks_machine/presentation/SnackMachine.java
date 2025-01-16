@@ -102,7 +102,8 @@ public class SnackMachine {
         var name = console.nextLine();
         System.out.println("Precio del snack: ");
         var price = Double.parseDouble(console.nextLine());
-        snacksService.addSnack(new Snack(name, price));
+        List<Snack> list = snacksService.getSnacks();
+        snacksService.addSnack(new Snack(list.get(list.size() - 1).getIdSnack() + 1, name, price));
         System.out.println("Tu snack se ha agregado correctamente");
         snacksService.showSnacks();
     }
@@ -117,8 +118,8 @@ public class SnackMachine {
             }
         }
     }
-    
-    private static void showInventory(ISnacksService snacksService){
+
+    private static void showInventory(ISnacksService snacksService) {
         snacksService.showSnacks();
     }
 
